@@ -1,0 +1,730 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;900&display=swap');
+@import url('../css/fontawesome-free-6.1.1-web/css/all.min.css');
+:root{
+    --color-negro: #000;
+    --color-blanco: #ffffff;
+    --color1: #f04336;
+    --color2: #1e4b57;
+    --color3: #676666;
+    --color4: #0a303a;
+    --color5: #f4f1ea;
+    --color6: #edece6;
+    --color7: #ebebeb;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+figure{
+    margin: 0;
+}
+p{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--color3);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    color: var(--color4);
+    font-style: normal;
+    font-weight: 900;
+    text-transform: inherit;
+}
+
+/***************** ID's INDEX ***************************/
+#main-header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-blanco);
+}
+#header-content{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+#main-banner{
+    background-image: url(../images/BANNER.JPG);
+    width: 1903px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+    opacity: 1;
+    min-height: 793px;
+    display: flex;
+    align-items: center;
+}
+#adopciones{
+    background-image: url(../images/banner-adoption.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 110px 0 150px;
+    box-sizing: border-box;
+}
+#resenas{
+    background-image: url(../images/background-img1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 110px 0 190px;
+    box-sizing: border-box;
+    position: relative;
+}
+#resenas::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 24px;
+    background-image: url(../images/white-border2.png);
+    background-repeat: repeat;
+    background-position: center;
+    z-index: 1;
+}
+#scroll-top{
+    background-color: var(--color1);
+    color: var(--color-blanco);
+    padding: 9px 15px;
+    font-size: 20px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 60%);
+    transition: all ease-in-out .5s;
+    z-index: 1000;
+}
+#scroll-top:hover{
+    background-color: var(--color4);
+    color: var(--color-blanco);
+}
+/***************** ID's PRODUCTOS ***************************/
+#tienda{
+    background-image: url(../images/banner-adoption.jpg);
+}
+#tienda .consejos h5{
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 20px 0;
+}
+/***************** clases generales **********************/
+.container{
+    max-width: 1230px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+.container-head{
+    max-width: 1480px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; 
+}
+.padding-LR{
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.padding-25{
+    padding: 25px;
+}
+.padding-110{
+    padding: 110px 0;
+}
+.padding-148{
+    padding: 148px 0;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col{
+    flex: 0 0 52%;
+    max-width: 52%;
+}
+.col2{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.col3{
+    flex-basis: 1;
+    flex-grow: 0;
+}
+.col4{
+    flex-basis: 0;
+    flex-grow: 1;
+    padding:  0 15px 0 15px;
+}
+.col5{
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.col6{
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col7{
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+.center{
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+    text-align: center!important;
+}
+.margin-65{
+    margin-bottom: 65px;
+}
+.margin-50{
+    margin-bottom: 50px;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.icon{
+    width: 35px;
+    height: 35px;
+    flex: 0 0 35px;
+    background: var(--color1);
+    color: var(--color-blanco);
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+    border-radius: 50%;
+    margin-right: 13px;
+}
+.video-publicidad{
+    aspect-ratio: 1366 / 720;
+    width: 100%;
+    height: 50%;
+    border: 20px solid var(--color6);
+}
+.video-responsive{
+    aspect-ratio: 16 / 9;
+    width: 92%;
+    height: auto;
+    border: 15px solid var(--color6);
+}
+.form-control{
+    width: 100%;
+    background: #f5f2eb;
+    border: none;
+    font-size: 14px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: block;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin: 15px 0;
+    font-family: inherit;
+}
+/*********************** TEXTOS*********************/
+.title{
+    font-size: 70px;
+    line-height: 1.01;
+    color: var(--color-blanco);
+    margin-bottom: 0;
+    letter-spacing: -.9px;
+    font-weight: 900;
+}
+.title-box{
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.title span{
+    z-index: 1;
+    background-image: url(../images/banner_text_shape.svg);
+    padding: 7px 20px;
+    display: inline-flex;
+    line-height: .8;
+    background-size: cover;
+    background-position: top center;
+}
+.title-2{
+    display: inline-flex;
+    font-size: 36px;
+    color: var(--color-blanco);
+    margin-bottom: 18px;
+    line-height: 1.1;
+    padding: 13px 30px 13px 20px;
+    background: var(--color1);
+    border-radius: 15px;
+}
+.title-servicios{
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+.descrip{
+    font-size: 18px;
+    color: var(--color-blanco);
+    line-height: 30px;
+    margin-bottom: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+.sub-title{
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1;
+    color: --;
+    margin-bottom: 10px;
+}
+/***************************** OTRAS CLASES **************************************/
+.header-border{
+    background-image: url(../images/borde-barra.png);
+    position: absolute;
+    left: 0;
+    bottom: -13px;
+    width: 100%;
+    height: 58px;
+    z-index: -1;
+    background-repeat: repeat;
+    background-position: center;
+}
+.main-nav{
+    display: flex;
+    flex-grow: 1;
+}
+.second-menu{
+    display: block !important;
+}
+.img-cliente{
+    width: 89px;
+    flex: 0 0 89px;
+    margin-right: 30px;
+}
+.img-cliente{
+    border-radius: 50%;
+    border: 7px solid var(--color5);
+}
+.logo{
+    width: 132px;
+    padding: 16px 0px;
+    min-height: 70px;
+    box-sizing: border-box;
+}
+.mapa-responsive{
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+}
+.banner-adicionales{
+    background-image: url(../images/banner-adicionales.jpg);
+    background-color: rgb(10, 48, 58);
+    background-position: center;
+    background-size: cover;
+}
+.toy{
+    margin-bottom: 55px;
+}
+.toy-photo{
+    margin-bottom: 25px;
+}
+.toy-descrip span a{
+    font-size: 16px;
+    color: var(--color3);
+    transition: all 0.3s ease-out 0s;
+}
+.toy-descrip span a:hover{
+    color: var(--color1);
+}
+.toy-descrip h5 a{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 0;
+    color: var(--color4);
+    transition: all 0.3s ease-out 0s;
+}
+.toy-descrip h5 a:hover{
+    color: var(--color1);
+}
+/***************** RESEÑAS *********************/
+.resena{
+    background-image: url(../images/reseña-box.svg);
+    background-repeat: no-repeat;
+    padding: 25px 30px 15px 25px;
+    display: flex;
+    align-items: flex-start;
+    min-height: 160px;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.resena::before{
+    content: " '' ";
+    position: absolute;
+    bottom: 0%;
+    right: 9%;
+    font-family: "Nunito";
+    font-size: 84px;
+    color: var(--color1);
+    line-height: 1;
+    z-index: -1;
+}
+.resena-content{
+    text-align: left;
+}
+.resena-content h5{
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+.resena-content span{
+    display: block;
+    font-size: 13px
+}
+/************************ BOX ***************************/
+.box-title{
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+.box-descrip{
+    overflow: hidden;
+    margin-bottom: 45px;
+}
+.box-icon{
+    max-width: 28px !important;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.box-margin{
+    margin-right: 30px;
+}
+/************************ ADOPTION ***************************/
+.adoption-box{
+    width: 380px;
+    height: 420px;
+    background: #f4f1ea;
+    position: relative;
+}
+.adoption-box a{
+    text-decoration: none;
+    color: var(--color2);
+    transition: all 0.3s ease-out 0s;
+}
+.adoption-box a:hover{
+    color: var(--color1);
+}
+.adoption-descrip{
+    background-image: url(../images/adop-descrip.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 53px 50px;
+    border-radius: 4px;
+    height: 420px;
+    box-sizing: border-box;
+}
+.adoption-descrip .sub-title{
+    color: var(--color-blanco);
+    margin-bottom: 13px;
+    font-size: 18px;
+    padding-left: 10px;
+    border-left: 3px solid var(--color-blanco);
+    line-height: 1;
+    text-align: left;
+}
+.adoption-descrip .title{
+    color: var(--color-blanco);
+    margin-bottom: 12px;
+    font-size: 40px;
+    line-height: 1.1;
+    text-align: left;
+}
+.adoption-descrip p{
+    color: var(--color-blanco);
+    margin-bottom: 30px;
+    text-align: left;
+}
+.adoption-descrip .btn{
+    background: var(--color-blanco);
+    color: var(--color1);
+}
+.adoption-descrip .btn:hover{
+    color: var(--color-blanco);
+}
+/************************ DOG ***************************/
+.dog-descrip{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    max-width: 223px;
+    margin: 0 auto 0;
+    text-align: center;
+}
+.dog-descrip .title{
+    font-size: 20px;
+    margin-bottom: 0;
+    padding: 16px 21px;
+    background-image: url(../images/breed_shape.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 1;
+    color: var(--color4);
+}
+/*********************** FOOTER**********************/
+.footer-top{
+    background-image: url(../images/background-img1.jpg);
+    padding: 105px 0 55px;
+    position: relative;
+}
+.footer-top::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 24px;
+    background-image: url(../images/white-border.png);
+    background-repeat: repeat;
+    background-position: center;
+    z-index: 1;
+}
+.footer-top::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 24px;
+    background-image: url(../images/footer-border.png);
+    background-repeat: repeat;
+    background-position: center;
+    z-index: 1;
+}
+.footer-contact{
+    display: flex;
+    align-items: flex-start;
+    margin: 30px 0 32px;
+}
+.content h4 a{
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 800;
+    color: inherit;
+    transition: all 0.3s ease-out 0s;
+
+}
+.content h4 a:hover{
+    color: var(--color1);
+}
+.content span{
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--color1);
+    font-weight: 900;
+    font-family: 'Nunito', sans-serif;
+}
+.footer-social a{
+    margin-right: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease-out 0s;
+}
+.footer-social a:hover{
+    color: var(--color1);
+}
+.bottom-footer{
+    background-color: var(--color4);
+    padding: 24px 0;
+}
+.b-footer-text{
+    color: var(--color-blanco);
+    line-height: 26px;
+    margin-bottom: 0;
+    display: inline-block;
+}
+/***************** MENUS ************************/
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.menu-main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 80px;
+}
+.menu-main li a{
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: var(--color2);
+    padding: 40px 20px;
+    display: block;
+    line-height: 1;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    z-index: 1;
+    transition: all 0.3s ease-out 0s;
+}
+.menu-main li a:hover{
+    color: var(--color1);
+}
+.menu2{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: 10px;
+    padding-left: 28px;
+    position: relative;
+}
+.menu2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5px;
+    height: 45px;
+    background: var(--color6);
+}
+.menu2 li{
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+}
+.menu2 li .icons{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    z-index: 1;
+    color: var(--color2);
+}
+.menu-servicios{
+    list-style: none;
+    padding: 0;
+}
+.menu-servicios li{
+    margin-bottom: 10px;
+}
+.menu-servicios li a{
+    font-size: 14px;
+    color: var(--color3);
+    font-weight: 400;
+    transition: all 0.3s ease-out 0;
+}
+.menu-servicios li a:hover{
+    font-size: 14px;
+    color: var(--color1);
+    font-weight: 400;
+}
+.menus-adicionales{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0;
+}
+.menus-adicionales li a{
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color1);
+}
+.menus-adicionales li{
+    padding-left: 10px;
+}
+.menus-adicionales li span{
+    color: var(--color-blanco);
+    font-weight: 700;
+    font-size: 16px;
+}
+.menus-adicionales li span::before{
+    padding-right: 10px;
+    color: var(--color1);
+    content: "|";
+}
+.menu-tienda{
+    border: 1px solid var(--color7);
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+.menu-tienda li{
+    display: flex;
+    align-items: center;
+    padding: 14px 40px 14px 18px;
+    width: 100%;
+    border-bottom: 1px solid var(--color7);
+    box-sizing: border-box;
+}
+.menu-tienda li a{
+    color: var(--color3);
+    font-size: 14px;
+    font-weight: 500;
+}
+/********************* BOTONES ******************/
+.btn{
+    background-color: var(--color1);
+    border: none;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 0;
+    color: var(--color-blanco);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 25px;
+    box-shadow: inset 0 0 0 0 var(--color4);
+    outline: none;
+    transition: ease-in-out 0.5s;
+}
+.btn:hover{
+    box-shadow: inset  200px 0 0 0  var(--color4);
+}
+.btn img{
+    max-width: 20px;
+    margin-left: 10px;
+}
+
+
+/********************* OTROS ******************/
+
+.fancybox__image{
+    background-color: white;
+}
